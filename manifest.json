@@ -20,11 +20,11 @@
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js":      ["./lib/jquery-2.1.1.min.js", "./content/content.js"],
+      "js":      ["./content/content.js"],
       "run_at":  "document_end"
     }
   ],
   "permissions": [
-    "tabs", "https://github.com/*"
+    "tabs", "https://github.com/*", "http://lgtm.camph.net/*"
   ]
 }
