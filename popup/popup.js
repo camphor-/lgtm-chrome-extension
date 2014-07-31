@@ -35,5 +35,8 @@ window.onload = function() {
   document.getElementById('reload-button').addEventListener('click', function() {
     load();
   });
+  document.getElementById('brand').addEventListener('click', function() {
+    chrome.tabs.create({ url: 'http://lgtm.camph.net/' });
+  });
 };
 
