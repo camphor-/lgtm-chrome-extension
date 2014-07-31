@@ -82,3 +82,8 @@ header > * {
   margin: 30px auto;
   cursor: pointer;
 }
+
+#images img:hover {
+  opacity: 0.9;
+  transition: opacity 0.2s linear;
+}
