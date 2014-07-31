@@ -9,8 +9,10 @@ var sendRequest = function(tabId, i) {
       image.addEventListener('click', function() {
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
           chrome.tabs.sendMessage(tabs[0].id, { markdown: data.markdown }, function(response) {
-            // console.log(response.farewell);
           });
+          setTimeout(function() {
+            window.close();
+          }, 50);
         });
       });
     }
