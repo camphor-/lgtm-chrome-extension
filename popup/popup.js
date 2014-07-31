@@ -26,4 +26,8 @@ var load = function() {
 
 window.onload = function() {
   load();
+  document.getElementById('reload-button').addEventListener('click', function() {
+    load();
+  });
 };
+
