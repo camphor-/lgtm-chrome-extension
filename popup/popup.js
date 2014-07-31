@@ -1,4 +1,4 @@
-var sendRequest = function(i) {
+var sendRequest = function(tabId, i) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'http://lgtm.camph.net/random.json', true);
   xhr.onreadystatechange = function() {
@@ -7,7 +7,11 @@ var sendRequest = function(i) {
       var image = document.getElementById('image-' + i);
       image.setAttribute('src', data.image_file);
       image.addEventListener('click', function() {
-        chrome.tabs.sendMessage(tabId, {markdown: data.markdown}, function(response) {});
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+          chrome.tabs.sendMessage(tabs[0].id, { markdown: data.markdown }, function(response) {
+            // console.log(response.farewell);
+          });
+        });
       });
     }
   };
@@ -20,7 +24,7 @@ var load = function() {
     tabId = tab[0].id;
   });
   for (var i = 0; i < 3; i++) {
-    sendRequest(i);
+    sendRequest(tabId, i);
   }
 };
 
