@@ -25,6 +25,6 @@
     }
   ],
   "permissions": [
-    "tabs", "https://github.com/*"
+    "tabs", "https://github.com/*", "http://lgtm.camph.net/*"
   ]
 }
