@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "CAMPHOR-LGTM Google Chrome Plug-in",
+  "name": "CAMPHOR-LGTM Google Chrome Extension",
   "version": "1.0",
   "author": "CAMPHOR-",
   "description": "This Google Chrome extension makes it easier to use CAMPHOR-LGTM.",
